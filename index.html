@@ -72,6 +72,13 @@
   }
   .underline-anim.is-visible { background-size: 100% 2px; }
   @media (prefers-reduced-motion: reduce) { .underline-anim { background-size: 100% 2px; transition: none; } }
+  .lk-swipe::-webkit-scrollbar { height: 0; }
+  @keyframes lkNovo { 0% { opacity: 1 } 50% { opacity: 0.7 } 100% { opacity: 1 } }
+  .lk-novo { animation: lkNovo 2s infinite; }
+  @keyframes lkFlip { 0% { transform: rotateX(0deg) } 50% { transform: rotateX(-90deg) } 100% { transform: rotateX(0deg) } }
+  .lk-cd { display: inline-block; backface-visibility: hidden; }
+  .lk-cd.is-flip { animation: lkFlip 320ms ease-in-out; }
+  @media (prefers-reduced-motion: reduce) { .lk-novo, .lk-cd.is-flip { animation: none; } }
   @keyframes lkIconBreathe {
     0%, 100% { box-shadow: 0 0 0 0 rgba(96,165,250,0.12); }
     50% { box-shadow: 0 0 0 8px rgba(96,165,250,0.06); }
@@ -90,38 +97,46 @@
 </helmet>
 <div style="background:#FFFFFF;color:#143856;font-family:Inter,system-ui,sans-serif;min-height:100vh">
   <!-- NAV -->
-  <div style="position:sticky;top:0;z-index:60;background:#0F2A44">
-    <div style="background:#0B2036;border-bottom:1px solid rgba(255,255,255,0.08)">
+  <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
+  <div style="background:#0B2036;border-bottom:1px solid rgba(255,255,255,0.08)">
+    <div>
       <div style="max-width:1280px;margin:0 auto;padding:8px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
         <div style="display:flex;align-items:center;gap:18px">
-          <a href="https://www.instagram.com/lokomoto.centar?igshid=1xbij65dqkw2x" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:#D6E4F0;text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="instagram"></i>17.3K</a>
-          <a href="https://www.facebook.com/lokomotostepastepanovic/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:#D6E4F0;text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="facebook"></i>25K</a>
+          <a href="https://www.instagram.com/lokomoto.centar?igshid=1xbij65dqkw2x" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="instagram"></i>17.3K</a>
+          <a href="https://www.facebook.com/lokomotostepastepanovic/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="facebook"></i>25K</a>
+          <span class="lk-novo" style="background:#C0392B;color:#FFFFFF;font-size:10px;font-weight:800;letter-spacing:0.12em;padding:4px 8px;border-radius:4px">NOVO</span>
         </div>
         <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-          <span style="background:#C0392B;color:#FFFFFF;font-size:10px;font-weight:800;letter-spacing:0.12em;padding:4px 8px;border-radius:4px">NOVO</span>
-          <a href="#program" style="font-size:13px;font-weight:700;color:#FFFFFF;text-decoration:none" style-hover="color:#8FC2EC">Procena i rehabilitacija bola u donjem delu leđa · Beograd</a>
+          <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
+            <a href="#program" style="font-size:13px;font-weight:700;color:#FFFFFF;text-decoration:none" style-hover="color:#8FC2EC">Procena i rehabilitacija bola u donjem delu leđa · Beograd</a>
+          </sc-if>
           <div style="display:flex;align-items:center;gap:6px;font-family:Archivo,sans-serif">
-            <span style="background:#FFFFFF;border-radius:6px;padding:4px 8px;font-size:13px;font-weight:800;color:#0B2036;min-width:34px;text-align:center">{{ cdD }}</span>
+            <span style="background:#FFFFFF;border-radius:6px;padding:3px 7px;font-size:12px;font-weight:800;color:#0B2036;min-width:28px;text-align:center" class="lk-cd" data-cd="cdD">{{ cdD }}</span>
             <span style="color:#A9C4DA;font-size:12px;font-weight:600">d</span>
-            <span style="background:#FFFFFF;border-radius:6px;padding:4px 8px;font-size:13px;font-weight:800;color:#0B2036;min-width:34px;text-align:center">{{ cdH }}</span>
+            <span style="background:#FFFFFF;border-radius:6px;padding:3px 7px;font-size:12px;font-weight:800;color:#0B2036;min-width:28px;text-align:center" class="lk-cd" data-cd="cdH">{{ cdH }}</span>
             <span style="color:#A9C4DA;font-size:12px;font-weight:600">h</span>
-            <span style="background:#FFFFFF;border-radius:6px;padding:4px 8px;font-size:13px;font-weight:800;color:#0B2036;min-width:34px;text-align:center">{{ cdM }}</span>
+            <span style="background:#FFFFFF;border-radius:6px;padding:3px 7px;font-size:12px;font-weight:800;color:#0B2036;min-width:28px;text-align:center" class="lk-cd" data-cd="cdM">{{ cdM }}</span>
             <span style="color:#A9C4DA;font-size:12px;font-weight:600">m</span>
-            <span style="background:#FFFFFF;border-radius:6px;padding:4px 8px;font-size:13px;font-weight:800;color:#0B2036;min-width:34px;text-align:center">{{ cdS }}</span>
+            <span style="background:#FFFFFF;border-radius:6px;padding:3px 7px;font-size:12px;font-weight:800;color:#0B2036;min-width:28px;text-align:center" class="lk-cd" data-cd="cdS">{{ cdS }}</span>
             <span style="color:#A9C4DA;font-size:12px;font-weight:600">s</span>
           </div>
         </div>
       </div>
     </div>
-    <div style="max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <div style="display:flex;align-items:center;gap:12px">
+  </div>
+  </sc-if>
+  <div style="position:sticky;top:0;z-index:60;background:#0F2A44">
+    <div style="max-width:1280px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-sizing:border-box">
+      <div style="display:flex;align-items:center;gap:12px;min-width:0">
         <img src="uploads/lokomoto-logo-krug.png" alt="Lokomoto Centar" style="width:46px;height:46px;object-fit:contain;border-radius:50%;display:block" />
         <div style="display:flex;flex-direction:column;line-height:1.15">
-          <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:16px;letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF">Lokomoto Centar</span>
-          <span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#8FAEC8">Fizikalna terapija i rehabilitacija</span>
+          <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:{{ navBrandSize }};letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF">Lokomoto Centar</span>
+          <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
+            <span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#8FAEC8">Fizikalna terapija i rehabilitacija</span>
+          </sc-if>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:28px">
+      <div style="display:flex;align-items:center;gap:28px;flex:none">
         <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
           <div style="display:flex;gap:26px;font-size:14px;font-weight:500;white-space:nowrap">
             <a href="#program" style="color:#DCE8F2" style-hover="color:#FFFFFF">Program</a>
@@ -130,7 +145,7 @@
             <a href="#logistika" style="color:#DCE8F2" style-hover="color:#FFFFFF">Detalji</a>
           </div>
         </sc-if>
-        <button type="button" onClick="{{ openModal }}" style="background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:12px 24px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap" style-hover="background:#2E8BD4">Rezerviši mesto · 399€</button>
+        <button type="button" onClick="{{ openModal }}" style="background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:{{ navBtnPad }};font-size:{{ navBtnSize }};font-weight:600;cursor:pointer;white-space:nowrap;flex:none" style-hover="background:#2E8BD4">{{ navCta }}</button>
       </div>
     </div>
   </div>
@@ -144,25 +159,37 @@
 
   <!-- HERO -->
   <div style="position:relative;overflow:hidden;background:#F9FBFD">
-    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background-image:url('/images/hero-procena.jpg');background-size:cover;background-position:center;opacity:0.12;pointer-events:none;-webkit-mask-image:linear-gradient(to left,#000 45%,transparent 100%);mask-image:linear-gradient(to left,#000 45%,transparent 100%)"></div>
+    
     <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(to left,rgba(249,251,253,0) 0%,#F9FBFD 55%,#F9FBFD 100%);pointer-events:none"></div>
     <div style="position:relative;max-width:1280px;margin:0 auto;padding:48px 28px 80px">
       <div style="display:grid;grid-template-columns:{{ heroCols }};gap:64px;align-items:center">
         <div data-reveal="1">
           <div style="display:inline-flex;align-items:center;gap:8px;border:1px solid #D1E7DD;background:#EBF5EE;color:#0F2C4D;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;letter-spacing:0.02em;margin-bottom:26px"><span style="color:#2B7DC0;font-size:10px">●</span>DVODNEVNA EDUKACIJA UŽIVO • BEOGRAD • 31.10.2026.</div>
-          <h1 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em;color:#0F2942;margin:0;max-width:720px"><span style="display:block">Već znaš 100 vežbi za leđa.</span><span style="display:block;color:#2B7DC0">Ali da li znaš koju da izabereš?</span></h1>
-          <p style="font-size:18px;line-height:1.6;color:#475569;margin:24px 0 0;max-width:520px">Procena i rehabilitacija bola u donjem delu leđa. Sistem koji povezuje procenu sa terapijom, sa merljivim kriterijumima za prelazak iz faze u fazu. Teorija i praktičan rad u parovima.</p>
+          <sc-if value="{{ isNarrow }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;align-items:center;gap:8px;margin-top:16px;font-family:Archivo,sans-serif">
+              <span style="background:#0F2942;border-radius:6px;padding:5px 9px;font-size:13px;font-weight:800;color:#FFFFFF;min-width:32px;text-align:center" class="lk-cd" data-cd="cdD">{{ cdD }}</span>
+              <span style="color:#64748B;font-size:12px;font-weight:600">d</span>
+              <span style="background:#0F2942;border-radius:6px;padding:5px 9px;font-size:13px;font-weight:800;color:#FFFFFF;min-width:32px;text-align:center" class="lk-cd" data-cd="cdH">{{ cdH }}</span>
+              <span style="color:#64748B;font-size:12px;font-weight:600">h</span>
+              <span style="background:#0F2942;border-radius:6px;padding:5px 9px;font-size:13px;font-weight:800;color:#FFFFFF;min-width:32px;text-align:center" class="lk-cd" data-cd="cdM">{{ cdM }}</span>
+              <span style="color:#64748B;font-size:12px;font-weight:600">m</span>
+              <span style="background:#0F2942;border-radius:6px;padding:5px 9px;font-size:13px;font-weight:800;color:#FFFFFF;min-width:32px;text-align:center" class="lk-cd" data-cd="cdS">{{ cdS }}</span>
+              <span style="color:#64748B;font-size:12px;font-weight:600">s</span>
+            </div>
+          </sc-if>
+          <h1 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em;color:#0F2942;margin:0;max-width:720px"><span style="display:block">Terapija bez jasne procene</span><span style="display:block;color:#2A6CB8">je nagađanje.</span></h1>
+          <p style="font-size:18px;line-height:1.6;color:#475569;margin:24px 0 0;max-width:520px">Sistem koji povezuje procenu bola u donjem delu leđa sa izborom terapije, sa merljivim kriterijumima za prelazak iz faze u fazu. Teorija i praktičan rad u parovima.</p>
           <div style="display:flex;align-items:center;flex-wrap:wrap;margin-top:32px">
             <button type="button" onClick="{{ openModal }}" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:16px 32px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 12px 28px -8px rgba(43,125,192,0.55)" style-hover="background:#2E8BD4">Rezerviši mesto · 399€<span style="font-size:15px">→</span></button>
-            <a href="#program" style="font-size:15px;font-weight:600;color:#0F2942;margin-left:16px" style-hover="color:#2B7DC0">Vidi program →</a>
+            <a href="#program" style="font-size:15px;font-weight:500;color:#475569;margin-left:16px;text-decoration:none" style-hover="color:#0F2942">Detaljan program</a>
           </div>
           <div style="margin-top:16px;font-size:13px;color:#64748B">Uplata na račun. Refundacija do 30 dana pre.</div>
         </div>
-        <div style="padding:8px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,0.15)">
+        <div style="padding:0;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(10,30,54,0.12)">
           <div onClick="{{ openVideo }}" style="position:relative;width:100%;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#0F2C4D;cursor:pointer;transition:transform 220ms ease" style-hover="transform:scale(1.01)">
             <video ref="{{ loopRef }}" src="uploads/hero-loop.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="width:100%;height:100%;object-fit:cover;display:block"></video>
             <div style="position:absolute;inset:0;background:rgba(15,44,77,0.20);display:flex;align-items:center;justify-content:center">
-              <div style="width:64px;height:64px;border-radius:50%;background:#2B7DC0;display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:24px;animation:lkPulse 2.2s ease-out infinite"><span style="margin-left:5px">▶</span></div>
+              <div style="width:64px;height:64px;border-radius:50%;background:rgba(43,125,192,0.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:24px;animation:lkPulse 2.2s ease-out infinite"><span style="margin-left:5px">▶</span></div>
             </div>
           </div>
         </div>
@@ -249,26 +276,26 @@
           <p style="font-size:16px;line-height:1.7;color:#334155;margin:0;max-width:520px;border-left:3px solid #2B7DC0;padding-left:20px">Ne učiš listu vežbi za dijagnozu, nego <strong style="background:#DBEAFE;color:#0F2942;padding:1px 6px;border-radius:4px;font-weight:700">kako da razmišljaš pred pacijentom</strong>. Dijagnoza ti kaže šta je, ali ne kaže <strong class="underline-anim" style="color:#0F2942;font-weight:700;padding-bottom:2px">koliko toga pacijent trenutno može da podnese</strong>.</p>
         </div>
         <div style="display:flex;align-items:center;gap:8px;margin:64px 0 32px"><span style="width:24px;height:2px;background:#2B7DC0;display:block"></span><h3 style="font-size:11px;font-weight:700;letter-spacing:0.15em;color:#2B7DC0;margin:0">ŠTA DOBIJAŠ NA OVOJ EDUKACIJI?</h3></div>
-        <div style="display:grid;grid-template-columns:{{ fourCols }};gap:16px">
-          <div class="lk-mcard" style="position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+        <div class="lk-swipe" style="{{ manifestWrap }}">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">01</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Način razmišljanja</div>
             <div style="font-size:14px;line-height:1.6;color:#94A3B8;margin-top:8px">Sistem odlučivanja koji povezuje nalaz sa terapijom, ne još jedna lista protokola.</div>
           </div>
-          <div class="lk-mcard" style="position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">02</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Merljivi kriterijumi</div>
             <div style="font-size:14px;line-height:1.6;color:#94A3B8;margin-top:8px">Prelazak iz faze u fazu po objektivnim kriterijumima, ne po osećaju.</div>
           </div>
-          <div class="lk-mcard" style="position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">03</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Aktivna terapija</div>
             <div style="font-size:14px;line-height:1.6;color:#94A3B8;margin-top:8px">Pacijent ne izlazi samo opušteniji, nego nauči da pokreće telo drugačije.</div>
           </div>
-          <div class="lk-mcard" style="position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">04</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Kompletan put</div>
@@ -297,7 +324,7 @@
             <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#FEE2E2;color:#DC2626;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✕</span><span style="font-size:15px;line-height:1.6;color:#475569">Snimak se traži za svaki slučaj.</span></div>
           </div>
         </div>
-        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:#2B7DC0;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:2;box-shadow:0 8px 20px rgba(43,125,192,0.35);animation:lkPulse 3s ease-out infinite">{{ changeArrow }}</div>
+        <div style="{{ arrowStyle }}background:#2B7DC0;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:2;box-shadow:0 8px 20px rgba(43,125,192,0.35);animation:lkPulse 3s ease-out infinite">{{ changeArrow }}</div>
         <div style="background:#FFFFFF;border:2px solid #2B7DC0;border-radius:20px;padding:32px;box-shadow:0 8px 32px rgba(43,125,192,0.12)">
           <div style="display:inline-block;background:#DBEAFE;color:#1E40AF;font-size:12px;font-weight:700;letter-spacing:0.15em;padding:6px 12px;border-radius:6px">POSLE</div>
           <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px">
@@ -893,7 +920,19 @@ class Component extends DCLogic {
     else setTimeout(this.drawIcons, 250);
   };
 
-  componentDidUpdate() { this.drawIcons(); }
+  componentDidUpdate() {
+    this.drawIcons();
+    const cd = this.countdown();
+    this._cdPrev = this._cdPrev || {};
+    document.querySelectorAll('.lk-cd').forEach(el => {
+      const k = el.getAttribute('data-cd');
+      if (this._cdPrev[k] === cd[k]) return;
+      el.classList.remove('is-flip');
+      void el.offsetWidth;
+      el.classList.add('is-flip');
+    });
+    Object.assign(this._cdPrev, cd);
+  }
 
   cardsRef = React.createRef();
 
@@ -1121,6 +1160,17 @@ class Component extends DCLogic {
       bioCols: this.state.vw >= 980 ? 'minmax(0,48fr) minmax(0,52fr)' : '1fr',
       changeGap: this.state.vw >= 820 ? '56px' : '40px',
       changeArrow: this.state.vw >= 820 ? '→' : '↓',
+      navCta: this.state.vw >= 640 ? 'Rezerviši mesto · 399€' : '399€',
+      navBrandSize: this.state.vw >= 640 ? '16px' : '14px',
+      isNarrow: !(this.state.vw >= 900),
+      manifestWrap: this.state.vw >= 620
+        ? 'display:grid;grid-template-columns:' + (this.state.vw >= 980 ? 'repeat(4,1fr)' : 'repeat(2,1fr)') + ';gap:16px'
+        : 'display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -28px;padding:0 28px 4px',
+      navBtnPad: this.state.vw >= 640 ? '12px 24px' : '10px 16px',
+      navBtnSize: this.state.vw >= 640 ? '14px' : '13px',
+      arrowStyle: this.state.vw >= 820
+        ? 'position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;'
+        : 'position:relative;justify-self:center;margin:-10px 0;width:40px;height:40px;border-radius:50%;box-shadow:0 0 0 8px #F3F8FC;',
       connectorStyle: this.state.vw >= 820
         ? 'position:absolute;left:0;right:0;top:50%;height:0;border-top:2px dashed #1E3A5F;opacity:0.35;z-index:0'
         : 'position:absolute;left:24px;top:0;bottom:0;width:0;border-left:2px dashed #1E3A5F;opacity:0.35;z-index:0',

@@ -100,7 +100,7 @@
   <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
   <div style="background:#0F2942;border-bottom:1px solid rgba(0,144,192,0.22)">
     <div>
-      <div style="max-width:1280px;margin:0 auto;padding:8px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:8px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
         <div style="display:flex;align-items:center;gap:18px">
           <a href="https://www.instagram.com/lokomoto.centar?igshid=1xbij65dqkw2x" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="instagram"></i>17.3K</a>
           <a href="https://www.facebook.com/lokomotostepastepanovic/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="facebook"></i>25K</a>
@@ -125,7 +125,7 @@
   </div>
   </sc-if>
   <div ref="{{ navRef }}" style="position:sticky;top:0;z-index:60;background:#0F2942;transition:transform 280ms cubic-bezier(0.4,0,0.2,1);will-change:transform">
-    <div style="max-width:1280px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-sizing:border-box">
+    <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-sizing:border-box">
       <div style="display:flex;align-items:center;gap:12px;min-width:0">
         <img src="uploads/lokomoto-logo-krug.png" alt="Lokomoto Centar" style="width:46px;height:46px;object-fit:contain;border-radius:50%;display:block" />
         <div style="display:flex;flex-direction:column;line-height:1.15">
@@ -159,7 +159,7 @@
   <div style="position:relative;overflow:hidden;background:#F9FBFD">
     
     <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(to left,rgba(249,251,253,0) 0%,#F9FBFD 55%,#F9FBFD 100%);pointer-events:none"></div>
-    <div style="position:relative;max-width:1280px;margin:0 auto;padding:{{ heroPad }}">
+    <div style="position:relative;box-sizing:border-box;max-width:1280px;margin:0 auto;padding:{{ heroPad }}">
       <div style="display:grid;grid-template-columns:{{ heroCols }};gap:64px;align-items:center">
         <div data-reveal="1">
           <div style="display:inline-flex;align-items:center;gap:8px;border:1px solid #D1E7DD;background:#EBF5EE;color:#0F2C4D;border-radius:999px;padding:{{ heroBadgePad }};font-weight:600;letter-spacing:0.02em;margin-bottom:{{ heroBadgeGap }};font-size:{{ heroBadgeSize }};white-space:{{ heroBadgeWrap }}"><span style="color:#0080B0;font-size:10px">●</span>DVODNEVNA EDUKACIJA UŽIVO • BEOGRAD • 31.10.2026.</div>
@@ -225,7 +225,7 @@
 
   <!-- PROBLEM -->
   <div style="background:#FFFFFF">
-    <div style="max-width:1200px;margin:0 auto;padding:80px 28px">
+    <div style="box-sizing:border-box;max-width:1200px;margin:0 auto;padding:80px 28px">
       <div data-reveal="1">
         <div style="text-align:center">
           <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(32px,4.6vw,52px);line-height:1.05;letter-spacing:-0.02em;color:#0F2C4D;margin:0">Zvuči poznato?</h2>
@@ -274,7 +274,7 @@
 
   <!-- MANIFEST -->
   <div style="background:#F3F8FC;border-top:1px solid #E2ECF5;border-bottom:1px solid #E2ECF5">
-    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
+    <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
       <div data-reveal="1">
         <div style="display:flex;gap:64px;align-items:center;flex-wrap:wrap">
           <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,48px);line-height:1.02;letter-spacing:-0.02em;text-transform:uppercase;text-align:left;max-width:640px;margin:0;color:#0F2942"><span style="display:block;white-space:nowrap">Vežba nije rešenje.</span><span style="display:block;white-space:nowrap;color:#0080B0;font-weight:700">Vežba je alat.</span></h2>
@@ -330,7 +330,7 @@
   </div>
 
   <!-- TRANSFORMACIJA -->
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
+  <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
     <div data-reveal="1">
       <div style="text-align:center;max-width:60ch;margin:0 auto">
         <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,48px);line-height:1.05;letter-spacing:-0.02em;color:#0F2942;margin:0">Šta se menja za 2 dana?</h2>
@@ -367,7 +367,7 @@
 
   <!-- PROGRAM -->
   <div id="program" style="background:#0F2A44;color:#FFFFFF">
-    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
+    <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
       <div data-reveal="1">
         <div style="text-align:center;max-width:56ch;margin:0 auto 40px">
           <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em;text-transform:uppercase;margin:0 0 16px">Dva dana, <span style="color:#60A5FA">dva sloja</span></h2>
@@ -521,7 +521,7 @@
 
   <!-- ŠTA DOBIJAŠ -->
   <div id="dobijas" style="position:relative;overflow:hidden;background:#F2F7FB"><div style="position:absolute;top:0;left:0;width:600px;height:600px;background:radial-gradient(circle at 0% 0%, #DBEAFE 0%, transparent 70%);opacity:0.3;pointer-events:none"></div>
-    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
+    <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
       <div data-reveal="1">
         <div style="text-align:center;max-width:56ch;margin:0 auto 48px">
           <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em;text-transform:uppercase;margin:0 0 16px">Šta odnosiš sa sobom</h2>
@@ -585,7 +585,7 @@
 
   <!-- ZA KOGA -->
   <div id="zakoga" style="background:#F2F8FF">
-    <div style="max-width:1280px;margin:0 auto;padding:80px 28px">
+    <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:80px 28px">
       <div data-reveal="1">
         <div style="text-align:center;max-width:56ch;margin:0 auto 48px">
           <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#0080B0">KO TREBA DA DOĐE</div>
@@ -627,7 +627,7 @@
   </div>
 
   <!-- INSTRUKTOR -->
-  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
+  <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
     <div data-reveal="1" style="display:grid;grid-template-columns:{{ bioCols }};gap:64px;align-items:center">
       <div style="position:relative"><div style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:#F3F8FC;box-shadow:0 20px 50px rgba(15,41,66,0.15)">
         <img src="uploads/lokomoto-123.jpg" alt="Novak Ilić, fizioterapeut i vlasnik Lokomoto Centra" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block" />
@@ -667,7 +667,7 @@
 
   <!-- FAQ -->
   <div style="background:#F3F8FC;border-top:1px solid #E2ECF5">
-    <div style="max-width:1120px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
+    <div style="box-sizing:border-box;max-width:1120px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
       <div data-reveal="1" style="text-align:center;margin-bottom:44px">
         <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em;text-transform:uppercase;margin:0">Verovatno se pitaš</h2>
       </div>
@@ -765,7 +765,7 @@
 
   <!-- LOGISTIKA -->
   <div id="logistika" style="background:#FFFFFF">
-    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
+    <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
       <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,4vw,56px);align-items:start">
         <div>
           <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em;text-transform:uppercase;margin:0 0 32px">Detalji</h2>
@@ -822,7 +822,7 @@
 
   <!-- FOOTER -->
   <div style="background:#FFFFFF;border-top:1px solid #E2ECF5">
-    <div style="max-width:1280px;margin:0 auto;padding:48px 28px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px">
+    <div style="box-sizing:border-box;max-width:1280px;margin:0 auto;padding:48px 28px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px">
       <div>
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
           <img src="uploads/lokomoto-logo-krug.png" alt="Lokomoto Centar" style="width:38px;height:38px;object-fit:contain;border-radius:50%;display:block" />

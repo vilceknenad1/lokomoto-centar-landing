@@ -164,7 +164,7 @@
         <div data-reveal="1">
           <div style="display:inline-flex;align-items:center;gap:8px;border:1px solid #D1E7DD;background:#EBF5EE;color:#0F2C4D;border-radius:999px;padding:{{ heroBadgePad }};font-weight:600;letter-spacing:0.02em;margin-bottom:{{ heroBadgeGap }};font-size:{{ heroBadgeSize }};white-space:{{ heroBadgeWrap }}"><span style="color:#0080B0;font-size:10px">●</span>DVODNEVNA EDUKACIJA UŽIVO • BEOGRAD • 31.10.2026.</div>
           <sc-if value="{{ showHeroCountdown }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex;align-items:center;gap:8px;margin-top:16px;font-family:Archivo,sans-serif">
+            <div style="display:flex;align-items:center;gap:8px;margin:16px 0 20px;font-family:Archivo,sans-serif">
               <span style="background:#0F2942;border-radius:6px;padding:5px 9px;font-size:13px;font-weight:800;color:#FFFFFF;min-width:32px;text-align:center" class="lk-cd" data-cd="cdD">{{ cdD }}</span>
               <span style="color:#64748B;font-size:12px;font-weight:600">d</span>
               <span style="background:#0F2942;border-radius:6px;padding:5px 9px;font-size:13px;font-weight:800;color:#FFFFFF;min-width:32px;text-align:center" class="lk-cd" data-cd="cdH">{{ cdH }}</span>
@@ -225,7 +225,7 @@
 
   <!-- PROBLEM -->
   <div style="background:#FFFFFF">
-    <div style="max-width:1200px;margin:0 auto;padding:80px 24px">
+    <div style="max-width:1200px;margin:0 auto;padding:80px 28px">
       <div data-reveal="1">
         <div style="text-align:center">
           <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(32px,4.6vw,52px);line-height:1.05;letter-spacing:-0.02em;color:#0F2C4D;margin:0">Zvuči poznato?</h2>
@@ -1248,7 +1248,7 @@ class Component extends DCLogic {
       heroWide: this.state.vw >= 1080,
       heroNarrow: this.state.vw < 1080,
       showHeroCountdown: this.state.vw >= 640 && this.state.vw < 1080,
-      heroPad: this.state.vw >= 1080 ? '48px 28px 80px' : '12px 20px 44px',
+      heroPad: this.state.vw >= 1080 ? '48px 28px 80px' : '12px 28px 44px',
       heroH1: this.state.vw >= 1080 ? 'clamp(30px,3.6vw,44px)' : '27px',
       heroBadgeGap: this.state.vw >= 1080 ? '26px' : '14px',
       heroBadgeSize: this.state.vw >= 1080 ? '13px' : '10px',
@@ -1271,7 +1271,7 @@ class Component extends DCLogic {
       mdC2: (this.state.mIdx || 0) === 2 ? '#0080B0' : '#C7D6E4',
       mdC3: (this.state.mIdx || 0) === 3 ? '#0080B0' : '#C7D6E4',
       bandH: this.state.vw >= 900 ? '460px' : '320px',
-      bandPad: this.state.vw >= 900 ? '0 28px 44px' : '0 20px 28px',
+      bandPad: this.state.vw >= 900 ? '0 28px 44px' : '0 28px 28px',
       bandSize: this.state.vw >= 900 ? '40px' : '28px',
       heroPSize: this.state.vw >= 1080 ? '18px' : '15px',
       heroPGap: this.state.vw >= 1080 ? '24px' : '12px',

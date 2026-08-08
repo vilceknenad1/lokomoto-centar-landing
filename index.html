@@ -45,14 +45,14 @@
   .lk-check { opacity: 0; transform: translateX(-6px); transition: opacity 380ms ease, transform 380ms ease; }
   .lk-check.is-on { opacity: 1; transform: translateX(0); }
   @media (prefers-reduced-motion: reduce) { .lk-check { opacity: 1; transform: none; } }
-  .lk-tcard:hover { transform: translateY(-2px); border-color: #2B7DC0; box-shadow: 0 12px 28px rgba(0,0,0,0.25); }
+  .lk-tcard:hover { transform: translateY(-2px); border-color: #0080B0; box-shadow: 0 12px 28px rgba(0,0,0,0.25); }
   .lk-gcard { opacity: 0; transform: translateY(14px); }
   .lk-gcard.is-on { opacity: 1; transform: translateY(0); }
   .lk-gcard { position: relative; }
   .lk-gcard::after {
     content: ""; position: absolute; inset: 0; border-radius: 20px; pointer-events: none; opacity: 0;
     transition: opacity 260ms ease;
-    background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 0%), rgba(43,125,192,0.10), transparent 70%);
+    background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 0%), rgba(0,128,176,0.10), transparent 70%);
   }
   .lk-gcard:hover::after { opacity: 1; }
   .lk-gcard:hover { box-shadow: 0 12px 30px rgba(15,41,66,0.12); border-color: #BFDBFE; transform: translateY(-3px); }
@@ -60,11 +60,11 @@
   .lk-gcheck { opacity: 0; transform: translateX(-6px); transition: opacity 340ms ease, transform 340ms ease; }
   .lk-gcheck.is-on { opacity: 1; transform: translateX(0); }
   @media (prefers-reduced-motion: reduce) { .lk-gcard, .lk-gcheck { opacity: 1; transform: none; } }
-  .lk-yes:hover { background: #F0F7FF; }
+  .lk-yes:hover { background: rgba(255,255,255,0.06); }
   .lk-ghost { position: absolute; top: 12px; right: 16px; font-size: 72px; font-weight: 800; line-height: 1; color: rgba(96,165,250,0.05); pointer-events: none; transition: all 0.4s ease; }
   .lk-mcard:hover .lk-ghost { color: rgba(96,165,250,0.10); transform: scale(1.05); }
   .underline-anim {
-    background: linear-gradient(to right, #2B7DC0, #2B7DC0);
+    background: linear-gradient(to right, #0080B0, #0080B0);
     background-size: 0% 2px;
     background-repeat: no-repeat;
     background-position: 0 100%;
@@ -86,25 +86,25 @@
   .lk-card .lk-icon { animation: lkIconBreathe 4s ease-in-out infinite; }
   @media (prefers-reduced-motion: reduce) { .lk-card .lk-icon { animation: none; } }
   .lk-card.is-idle-beam::before { opacity: 0.25; animation: lkRotate 4s linear 1; }
-  .lk-card:hover { transform: translateY(-4px); border-color: #2B7DC0; box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
+  .lk-card:hover { transform: translateY(-4px); border-color: #0080B0; box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
   @media (prefers-reduced-motion: reduce) {
     .lk-card { opacity: 1; transform: none; transition: none; }
     .lk-card::before { animation: none !important; opacity: 0; }
   }
-  .lk-card:hover .lk-icon { background: #2B7DC0; border-color: #2B7DC0; color: #FFFFFF; }
-  @keyframes lkPulse { 0% { box-shadow: 0 0 0 0 rgba(43,125,192,0.45); } 70% { box-shadow: 0 0 0 22px rgba(43,125,192,0); } 100% { box-shadow: 0 0 0 0 rgba(43,125,192,0); } }
+  .lk-card:hover .lk-icon { background: #0080B0; border-color: #0080B0; color: #FFFFFF; }
+  @keyframes lkPulse { 0% { box-shadow: 0 0 0 0 rgba(0,128,176,0.45); } 70% { box-shadow: 0 0 0 22px rgba(0,128,176,0); } 100% { box-shadow: 0 0 0 0 rgba(0,128,176,0); } }
 </style>
 </helmet>
 <div style="background:#FFFFFF;color:#143856;font-family:Inter,system-ui,sans-serif;min-height:100vh">
   <!-- NAV -->
   <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
-  <div style="background:#0B2036;border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div style="background:#0F2942;border-bottom:1px solid rgba(0,144,192,0.22)">
     <div>
       <div style="max-width:1280px;margin:0 auto;padding:8px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
         <div style="display:flex;align-items:center;gap:18px">
           <a href="https://www.instagram.com/lokomoto.centar?igshid=1xbij65dqkw2x" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="instagram"></i>17.3K</a>
           <a href="https://www.facebook.com/lokomotostepastepanovic/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;font-weight:600" style-hover="color:#FFFFFF"><i data-lucide="facebook"></i>25K</a>
-          <span class="lk-novo" style="background:#C0392B;color:#FFFFFF;font-size:10px;font-weight:800;letter-spacing:0.12em;padding:4px 8px;border-radius:4px">NOVO</span>
+          <span class="lk-novo" style="background:#7DBE4E;color:#FFFFFF;font-size:10px;font-weight:800;letter-spacing:0.12em;padding:4px 8px;border-radius:4px">NOVO</span>
         </div>
         <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
           <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
@@ -125,7 +125,7 @@
     </div>
   </div>
   </sc-if>
-  <div style="position:sticky;top:0;z-index:60;background:#0F2A44">
+  <div ref="{{ navRef }}" style="position:sticky;top:0;z-index:60;background:#0F2942;transition:transform 280ms cubic-bezier(0.4,0,0.2,1);will-change:transform">
     <div style="max-width:1280px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-sizing:border-box">
       <div style="display:flex;align-items:center;gap:12px;min-width:0">
         <img src="uploads/lokomoto-logo-krug.png" alt="Lokomoto Centar" style="width:46px;height:46px;object-fit:contain;border-radius:50%;display:block" />
@@ -145,14 +145,14 @@
             <a href="#logistika" style="color:#DCE8F2" style-hover="color:#FFFFFF">Detalji</a>
           </div>
         </sc-if>
-        <button type="button" onClick="{{ openModal }}" style="background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:{{ navBtnPad }};font-size:{{ navBtnSize }};font-weight:600;cursor:pointer;white-space:nowrap;flex:none" style-hover="background:#2E8BD4">{{ navCta }}</button>
+        <button type="button" onClick="{{ openModal }}" style="background:linear-gradient(135deg,#0090C0 0%,#0080B0 48%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:{{ navBtnPad }};font-size:{{ navBtnSize }};font-weight:600;cursor:pointer;white-space:nowrap;flex:none" style-hover="background:#2E8BD4">{{ navCta }}</button>
       </div>
     </div>
   </div>
   <template id="__bundler_thumbnail" data-bg-color="#0F2942">
     <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
       <rect width="1200" height="800" fill="#0F2942"></rect>
-      <circle cx="600" cy="400" r="170" fill="none" stroke="#2B7DC0" stroke-width="24"></circle>
+      <circle cx="600" cy="400" r="170" fill="none" stroke="#0080B0" stroke-width="24"></circle>
       <text x="600" y="440" text-anchor="middle" font-family="Archivo, sans-serif" font-size="150" font-weight="800" fill="#FFFFFF">LC</text>
     </svg>
   </template>
@@ -161,11 +161,11 @@
   <div style="position:relative;overflow:hidden;background:#F9FBFD">
     
     <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(to left,rgba(249,251,253,0) 0%,#F9FBFD 55%,#F9FBFD 100%);pointer-events:none"></div>
-    <div style="position:relative;max-width:1280px;margin:0 auto;padding:48px 28px 80px">
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:{{ heroPad }}">
       <div style="display:grid;grid-template-columns:{{ heroCols }};gap:64px;align-items:center">
         <div data-reveal="1">
-          <div style="display:inline-flex;align-items:center;gap:8px;border:1px solid #D1E7DD;background:#EBF5EE;color:#0F2C4D;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;letter-spacing:0.02em;margin-bottom:26px"><span style="color:#2B7DC0;font-size:10px">●</span>DVODNEVNA EDUKACIJA UŽIVO • BEOGRAD • 31.10.2026.</div>
-          <sc-if value="{{ isNarrow }}" hint-placeholder-val="{{ false }}">
+          <div style="display:inline-flex;align-items:center;gap:8px;border:1px solid #D1E7DD;background:#EBF5EE;color:#0F2C4D;border-radius:999px;padding:{{ heroBadgePad }};font-weight:600;letter-spacing:0.02em;margin-bottom:{{ heroBadgeGap }};font-size:{{ heroBadgeSize }};white-space:{{ heroBadgeWrap }}"><span style="color:#0080B0;font-size:10px">●</span>DVODNEVNA EDUKACIJA UŽIVO • BEOGRAD • 31.10.2026.</div>
+          <sc-if value="{{ showHeroCountdown }}" hint-placeholder-val="{{ false }}">
             <div style="display:flex;align-items:center;gap:8px;margin-top:16px;font-family:Archivo,sans-serif">
               <span style="background:#0F2942;border-radius:6px;padding:5px 9px;font-size:13px;font-weight:800;color:#FFFFFF;min-width:32px;text-align:center" class="lk-cd" data-cd="cdD">{{ cdD }}</span>
               <span style="color:#64748B;font-size:12px;font-weight:600">d</span>
@@ -177,38 +177,48 @@
               <span style="color:#64748B;font-size:12px;font-weight:600">s</span>
             </div>
           </sc-if>
-          <h1 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-0.02em;color:#0F2942;margin:0;max-width:720px"><span style="display:block">Terapija bez jasne procene</span><span style="display:block;color:#2A6CB8">je nagađanje.</span></h1>
-          <p style="font-size:18px;line-height:1.6;color:#475569;margin:24px 0 0;max-width:520px">Sistem koji povezuje procenu bola u donjem delu leđa sa izborom terapije, sa merljivim kriterijumima za prelazak iz faze u fazu. Teorija i praktičan rad u parovima.</p>
-          <div style="display:flex;align-items:center;flex-wrap:wrap;margin-top:32px">
-            <button type="button" onClick="{{ openModal }}" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:16px 32px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 12px 28px -8px rgba(43,125,192,0.55)" style-hover="background:#2E8BD4">Rezerviši mesto · 399€<span style="font-size:15px">→</span></button>
-            <a href="#program" style="font-size:15px;font-weight:500;color:#475569;margin-left:16px;text-decoration:none" style-hover="color:#0F2942">Detaljan program</a>
+          <h1 style="font-family:Archivo,sans-serif;font-weight:800;font-size:{{ heroH1 }};line-height:1.06;letter-spacing:-0.02em;color:#0F2942;margin:0;max-width:720px"><span style="display:block">Terapija bez jasne procene</span><span style="display:block;color:#2A6CB8">je nagađanje.</span></h1>
+          <p style="font-size:{{ heroPSize }};line-height:1.55;color:#475569;margin:{{ heroPGap }} 0 0;max-width:520px">Sistem koji povezuje procenu bola u donjem delu leđa sa izborom terapije, sa merljivim kriterijumima za prelazak iz faze u fazu. Teorija i praktičan rad u parovima.</p>
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:{{ heroCtaGap }}">
+            <button type="button" onClick="{{ openModal }}" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;width:{{ ctaW }};background:linear-gradient(135deg,#0090C0 0%,#0080B0 48%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:16px 32px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 12px 28px -8px rgba(0,128,176,0.55)" style-hover="background:#2E8BD4">Rezerviši mesto · 399€<span style="font-size:15px">→</span></button>
+            <a href="#program" style="font-size:15px;font-weight:500;color:#475569;text-decoration:none" style-hover="color:#0F2942">Detaljan program</a>
           </div>
-          <div style="margin-top:16px;font-size:13px;color:#64748B">Uplata na račun. Refundacija do 30 dana pre.</div>
+          <div style="margin-top:12px;font-size:13px;color:#64748B">Uplata na račun. Refundacija do 30 dana pre.</div>
+          <sc-if value="{{ heroNarrow }}" hint-placeholder-val="{{ false }}">
+            <div onClick="{{ openVideo }}" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#0F2C4D;cursor:pointer;margin-top:16px;box-shadow:0 0 0 1px rgba(15,41,66,0.08), 0 4px 14px rgba(10,30,54,0.14), 0 18px 44px -8px rgba(10,30,54,0.38)">
+              <video ref="{{ loopRefM }}" src="uploads/hero-loop.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block"></video>
+              <div style="position:absolute;inset:0;background:rgba(15,44,77,0.20);display:flex;align-items:center;justify-content:center">
+                <div style="width:54px;height:54px;border-radius:50%;background:rgba(0,128,176,0.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:20px;animation:lkPulse 2.2s ease-out infinite"><span style="margin-left:4px">▶</span></div>
+              </div>
+            </div>
+          </sc-if>
         </div>
+        <sc-if value="{{ heroWide }}" hint-placeholder-val="{{ true }}">
         <div style="padding:0;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(10,30,54,0.12)">
           <div onClick="{{ openVideo }}" style="position:relative;width:100%;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#0F2C4D;cursor:pointer;transition:transform 220ms ease" style-hover="transform:scale(1.01)">
             <video ref="{{ loopRef }}" src="uploads/hero-loop.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="width:100%;height:100%;object-fit:cover;display:block"></video>
             <div style="position:absolute;inset:0;background:rgba(15,44,77,0.20);display:flex;align-items:center;justify-content:center">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(43,125,192,0.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:24px;animation:lkPulse 2.2s ease-out infinite"><span style="margin-left:5px">▶</span></div>
+              <div style="width:64px;height:64px;border-radius:50%;background:rgba(0,128,176,0.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:24px;animation:lkPulse 2.2s ease-out infinite"><span style="margin-left:5px">▶</span></div>
             </div>
           </div>
         </div>
+        </sc-if>
       </div>
       <div style="margin-top:64px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;padding:20px;display:grid;grid-template-columns:{{ fourCols }};gap:20px">
         <div style="display:flex;align-items:center;gap:14px">
-          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#2B7DC0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">✓</span>
+          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#0080B0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">✓</span>
           <div><div style="font-family:Archivo,sans-serif;font-weight:700;font-size:24px;color:#0F2C4D;line-height:1.1">15+</div><div style="font-size:13px;color:#64748B;margin-top:3px">godina prakse</div></div>
         </div>
         <div style="display:flex;align-items:center;gap:14px">
-          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#2B7DC0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">✚</span>
+          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#0080B0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">✚</span>
           <div><div style="font-family:Archivo,sans-serif;font-weight:700;font-size:24px;color:#0F2C4D;line-height:1.1">Klinika</div><div style="font-size:13px;color:#64748B;margin-top:3px">specijalizovana za rehabilitaciju</div></div>
         </div>
         <div style="display:flex;align-items:center;gap:14px">
-          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#2B7DC0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">◍</span>
+          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#0080B0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">◍</span>
           <div><div style="font-family:Archivo,sans-serif;font-weight:700;font-size:24px;color:#0F2C4D;line-height:1.1">20</div><div style="font-size:13px;color:#64748B;margin-top:3px">mesta, mala grupa</div></div>
         </div>
         <div style="display:flex;align-items:center;gap:14px">
-          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#2B7DC0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">▣</span>
+          <span style="width:36px;height:36px;border-radius:8px;background:#EFF6FF;color:#0080B0;flex:none;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700">▣</span>
           <div><div style="font-family:Archivo,sans-serif;font-weight:700;font-size:24px;color:#0F2C4D;line-height:1.1">Uživo</div><div style="font-size:13px;color:#64748B;margin-top:3px">Beograd, 31.10.2026.</div></div>
         </div>
       </div>
@@ -269,39 +279,54 @@
     <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) 28px">
       <div data-reveal="1">
         <div style="display:flex;gap:64px;align-items:center;flex-wrap:wrap">
-          <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,48px);line-height:1.02;letter-spacing:-0.02em;text-transform:uppercase;text-align:left;max-width:640px;margin:0;color:#0F2942"><span style="display:block;white-space:nowrap">Vežba nije rešenje.</span><span style="display:block;white-space:nowrap;color:#2B7DC0;font-weight:700">Vežba je alat.</span></h2>
+          <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,48px);line-height:1.02;letter-spacing:-0.02em;text-transform:uppercase;text-align:left;max-width:640px;margin:0;color:#0F2942"><span style="display:block;white-space:nowrap">Vežba nije rešenje.</span><span style="display:block;white-space:nowrap;color:#0080B0;font-weight:700">Vežba je alat.</span></h2>
         </div>
         <div style="display:grid;grid-template-columns:{{ twoCols }};gap:48px;margin-top:40px">
-          <p style="font-size:16px;line-height:1.7;color:#334155;margin:0;max-width:520px;border-left:3px solid #2B7DC0;padding-left:20px">Recept ti daje <strong class="underline-anim" style="color:#0F2942;font-weight:700;padding-bottom:2px">jedno jelo</strong>. Ako znaš da kuvaš, iz istih sastojaka napraviš ono što je potrebno. Ovo nije kurs tehnika, ovo je <strong style="background:#DBEAFE;color:#0F2942;padding:1px 6px;border-radius:4px;font-weight:700">kurs načina razmišljanja</strong>.</p>
-          <p style="font-size:16px;line-height:1.7;color:#334155;margin:0;max-width:520px;border-left:3px solid #2B7DC0;padding-left:20px">Ne učiš listu vežbi za dijagnozu, nego <strong style="background:#DBEAFE;color:#0F2942;padding:1px 6px;border-radius:4px;font-weight:700">kako da razmišljaš pred pacijentom</strong>. Dijagnoza ti kaže šta je, ali ne kaže <strong class="underline-anim" style="color:#0F2942;font-weight:700;padding-bottom:2px">koliko toga pacijent trenutno može da podnese</strong>.</p>
+          <p style="font-size:16px;line-height:1.7;color:#334155;margin:0;max-width:520px;border-left:3px solid #0080B0;padding-left:20px">Recept ti daje <strong class="underline-anim" style="color:#0F2942;font-weight:700;padding-bottom:2px">jedno jelo</strong>. Ako znaš da kuvaš, iz istih sastojaka napraviš ono što je potrebno. Ovo nije kurs tehnika, ovo je <strong style="background:#DBEAFE;color:#0F2942;padding:1px 6px;border-radius:4px;font-weight:700">kurs načina razmišljanja</strong>.</p>
+          <p style="font-size:16px;line-height:1.7;color:#334155;margin:0;max-width:520px;border-left:3px solid #0080B0;padding-left:20px">Ne učiš listu vežbi za dijagnozu, nego <strong style="background:#DBEAFE;color:#0F2942;padding:1px 6px;border-radius:4px;font-weight:700">kako da razmišljaš pred pacijentom</strong>. Dijagnoza ti kaže šta je, ali ne kaže <strong class="underline-anim" style="color:#0F2942;font-weight:700;padding-bottom:2px">koliko toga pacijent trenutno može da podnese</strong>.</p>
         </div>
-        <div style="display:flex;align-items:center;gap:8px;margin:64px 0 32px"><span style="width:24px;height:2px;background:#2B7DC0;display:block"></span><h3 style="font-size:11px;font-weight:700;letter-spacing:0.15em;color:#2B7DC0;margin:0">ŠTA DOBIJAŠ NA OVOJ EDUKACIJI?</h3></div>
-        <div class="lk-swipe" style="{{ manifestWrap }}">
-          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+        <div style="display:flex;align-items:center;gap:8px;margin:64px 0 32px"><span style="width:24px;height:2px;background:#0080B0;display:block"></span><h3 style="font-size:11px;font-weight:700;letter-spacing:0.15em;color:#0080B0;margin:0">ŠTA DOBIJAŠ NA OVOJ EDUKACIJI?</h3></div>
+        <div class="lk-swipe" ref="{{ manifestRef }}" style="{{ manifestWrap }}">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#0080B0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">01</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Način razmišljanja</div>
             <div style="font-size:14px;line-height:1.6;color:#94A3B8;margin-top:8px">Sistem odlučivanja koji povezuje nalaz sa terapijom, ne još jedna lista protokola.</div>
           </div>
-          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#0080B0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">02</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Merljivi kriterijumi</div>
             <div style="font-size:14px;line-height:1.6;color:#94A3B8;margin-top:8px">Prelazak iz faze u fazu po objektivnim kriterijumima, ne po osećaju.</div>
           </div>
-          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#0080B0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">03</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Aktivna terapija</div>
             <div style="font-size:14px;line-height:1.6;color:#94A3B8;margin-top:8px">Pacijent ne izlazi samo opušteniji, nego nauči da pokreće telo drugačije.</div>
           </div>
-          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#2B7DC0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
+          <div class="lk-mcard" style="scroll-snap-align:start;flex:0 0 78%;position:relative;overflow:hidden;background:#0F2C4D;border:1px solid #1E3A5F;border-radius:16px;padding:24px;min-height:180px;transition:all 220ms ease" style-hover="transform:translateY(-2px);border-color:#0080B0;box-shadow:0 12px 30px rgba(0,0,0,0.22)">
             <div class="lk-ghost" style="font-family:Archivo,sans-serif">04</div>
             <div style="position:relative;z-index:1;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;color:#60A5FA">KORAK</div>
             <div style="font-size:17px;font-weight:700;color:#FFFFFF;margin-top:12px">Kompletan put</div>
             <div style="font-size:14px;line-height:1.6;color:#94A3B8;margin-top:8px">Od prvog kontakta do povratka u teretanu: šipka, hex bar, kablovi, pliometrija.</div>
           </div>
         </div>
+        <sc-if value="{{ manifestSwipe }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px">
+            <div style="display:flex;align-items:center;gap:7px">
+              <span style="width:{{ mdW0 }};height:6px;border-radius:999px;background:{{ mdC0 }};transition:width 220ms ease,background 220ms ease"></span>
+              <span style="width:{{ mdW1 }};height:6px;border-radius:999px;background:{{ mdC1 }};transition:width 220ms ease,background 220ms ease"></span>
+              <span style="width:{{ mdW2 }};height:6px;border-radius:999px;background:{{ mdC2 }};transition:width 220ms ease,background 220ms ease"></span>
+              <span style="width:{{ mdW3 }};height:6px;border-radius:999px;background:{{ mdC3 }};transition:width 220ms ease,background 220ms ease"></span>
+              <span style="font-size:12px;color:#64748B;margin-left:6px">prevuci &rsaquo;</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button type="button" aria-label="Prethodna" onClick="{{ manifestPrev }}" style="width:38px;height:38px;border-radius:50%;border:1px solid #CBDCEA;background:#FFFFFF;color:#0F2942;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(15,41,66,0.08)">‹</button>
+              <button type="button" aria-label="Sledeća" onClick="{{ manifestNext }}" style="width:38px;height:38px;border-radius:50%;border:1px solid #CBDCEA;background:#FFFFFF;color:#0F2942;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(15,41,66,0.08)">›</button>
+            </div>
+          </div>
+        </sc-if>
       </div>
     </div>
   </div>
@@ -324,16 +349,17 @@
             <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#FEE2E2;color:#DC2626;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✕</span><span style="font-size:15px;line-height:1.6;color:#475569">Snimak se traži za svaki slučaj.</span></div>
           </div>
         </div>
-        <div style="{{ arrowStyle }}background:#2B7DC0;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:2;box-shadow:0 8px 20px rgba(43,125,192,0.35);animation:lkPulse 3s ease-out infinite">{{ changeArrow }}</div>
-        <div style="background:#FFFFFF;border:2px solid #2B7DC0;border-radius:20px;padding:32px;box-shadow:0 8px 32px rgba(43,125,192,0.12)">
-          <div style="display:inline-block;background:#DBEAFE;color:#1E40AF;font-size:12px;font-weight:700;letter-spacing:0.15em;padding:6px 12px;border-radius:6px">POSLE</div>
-          <div style="display:flex;flex-direction:column;gap:16px;margin-top:24px">
-            <div class="lk-check" data-i="0" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#0F2942;font-weight:700">Za par minuta znaš: šalješ dalje ili tretiraš.</span></div>
-            <div class="lk-check" data-i="1" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#0F2942;font-weight:500">Izvodiš i tumačiš ključne testove.</span></div>
-            <div class="lk-check" data-i="2" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#0F2942;font-weight:500">Razlikuješ herniju, fasetni sindrom, stenozu i nespecifični bol.</span></div>
-            <div class="lk-check" data-i="3" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#0F2942;font-weight:500">Imaš plan od prve vežbe do punog opterećenja.</span></div>
-            <div class="lk-check" data-i="4" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#0F2942;font-weight:500">Znaš kad je snimak potreban, a kad nepotreban trošak.</span></div>
-            <div class="lk-check" data-i="5" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#0F2942;font-weight:700">Menjaš fazu po merljivim kriterijumima, ne po osećaju.</span></div>
+        <div style="{{ arrowStyle }}background:#0080B0;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:2;box-shadow:0 8px 20px rgba(0,128,176,0.35);animation:lkPulse 3s ease-out infinite">{{ changeArrow }}</div>
+        <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,#123A63 0%,#0F2C4D 60%,#0B2340 100%);border:1px solid #1E3A5F;border-radius:20px;padding:32px;box-shadow:0 18px 40px rgba(11,35,64,0.30)">
+          <span style="position:absolute;top:-50px;right:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(0,144,192,0.30) 0%,transparent 70%);pointer-events:none"></span>
+          <div style="position:relative;display:inline-block;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;font-size:12px;font-weight:700;letter-spacing:0.15em;padding:6px 12px;border-radius:6px">POSLE</div>
+          <div style="position:relative;display:flex;flex-direction:column;gap:16px;margin-top:24px">
+            <div class="lk-check" data-i="0" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#FFFFFF;font-weight:700">Za par minuta znaš: šalješ dalje ili tretiraš.</span></div>
+            <div class="lk-check" data-i="1" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#DCEAF6;font-weight:500">Izvodiš i tumačiš ključne testove.</span></div>
+            <div class="lk-check" data-i="2" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#DCEAF6;font-weight:500">Razlikuješ herniju, fasetni sindrom, stenozu i nespecifični bol.</span></div>
+            <div class="lk-check" data-i="3" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#DCEAF6;font-weight:500">Imaš plan od prve vežbe do punog opterećenja.</span></div>
+            <div class="lk-check" data-i="4" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#DCEAF6;font-weight:500">Znaš kad je snimak potreban, a kad nepotreban trošak.</span></div>
+            <div class="lk-check" data-i="5" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.6;color:#FFFFFF;font-weight:700">Menjaš fazu po merljivim kriterijumima, ne po osećaju.</span></div>
           </div>
           <div style="display:flex;align-items:center;gap:10px;background:#DCFCE7;color:#166534;font-size:14px;font-weight:600;padding:14px 20px;border-radius:12px;margin-top:24px"><i data-lucide="calendar-check"></i>Primenjuješ već od ponedeljka</div>
         </div>
@@ -361,60 +387,60 @@
         <div style="position:relative;padding-top:6px">
           <div style="position:absolute;left:0;right:0;top:0;height:0;border-top:2px dashed #1E3A5F"></div>
           <div style="position:relative;display:grid;grid-template-columns:{{ threeCols }};gap:20px">
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#60A5FA;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#60A5FA;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">01</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#60A5FA">BOL</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Bol kao iskustvo</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Biopsihosocijalni pristup, pokret kao naučeno ponašanje, kapacitet i tolerancija tkiva.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Biopsihosocijalni pristup, pokret kao naučeno ponašanje, kapacitet i tolerancija tkiva.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#7DD3E8;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#7DD3E8;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">02</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#7DD3E8">ANATOMIJA</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Funkcionalna anatomija</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Struktura kroz funkciju: šta nosi opterećenje i pod kojim uslovima.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Struktura kroz funkciju: šta nosi opterećenje i pod kojim uslovima.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#93C5FD;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#93C5FD;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">03</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#93C5FD">BIOMEHANIKA</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Opterećenje kičme</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Ravni pokreta, lumbo-pelvični ritam, raspodela opterećenja.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Ravni pokreta, lumbo-pelvični ritam, raspodela opterećenja.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#5EC8D8;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#5EC8D8;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">04</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#5EC8D8">DIJAGNOSTIKA</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Baterija testova</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Kako se test izvodi, šta meri i kako se tumači u kontekstu nalaza.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Kako se test izvodi, šta meri i kako se tumači u kontekstu nalaza.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#A5C8FF;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#A5C8FF;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">05</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#A5C8FF">DIFERENCIJALNA</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Crvene zastavice</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Kada se pacijent šalje dalje, kada je snimak potreban a kada nije.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Kada se pacijent šalje dalje, kada je snimak potreban a kada nije.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:linear-gradient(160deg,#1A2F4A 0%,#12233A 100%);border:1.5px solid #3B82F6;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
-            <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#38BDF8;box-shadow:0 0 0 3px #0F2A44"></span>
-            <span style="position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;letter-spacing:0.16em;color:#93C5FD;background:rgba(59,130,246,0.16);border:1px solid rgba(59,130,246,0.32);border-radius:5px;padding:3px 7px">UŽIVO</span>
+          <div class="lk-tcard" style="position:relative;background:linear-gradient(140deg,#FFFFFF 0%,#E9F3FC 100%);border:1px solid #FFFFFF;border-radius:16px;padding:24px;min-height:160px;box-shadow:0 20px 46px rgba(4,17,32,0.45);transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+            <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 0 3px #0F2A44"></span>
+            <span style="position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;letter-spacing:0.16em;color:#FFFFFF;background:#0080B0;border:1px solid #0080B0;border-radius:5px;padding:4px 9px">UŽIVO</span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-              <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#38BDF8;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">06</span>
-              <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#38BDF8">PRAKSA</span>
+              <span style="width:24px;height:24px;flex:none;border-radius:6px;background:#DBEAFE;color:#0F2942;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">06</span>
+              <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#0080B0">PRAKSA</span>
             </div>
-            <div style="font-size:17px;font-weight:600;margin-bottom:10px">Praktični blok</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Testiranje uživo u parovima, sa korekcijom izvođenja i tumačenja.</div>
+            <div style="font-size:18px;font-weight:800;font-family:Archivo,sans-serif;letter-spacing:-0.01em;color:#0F2942;margin-bottom:10px">Praktični blok</div>
+            <div style="font-size:15.5px;line-height:1.6;color:#42607B">Testiranje uživo u parovima, sa korekcijom izvođenja i tumačenja.</div>
           </div>
           </div>
         </div>
@@ -432,60 +458,60 @@
         <div style="position:relative;padding-top:6px">
           <div style="position:absolute;left:0;right:0;top:0;height:0;border-top:2px dashed #1E3A5F"></div>
           <div style="position:relative;display:grid;grid-template-columns:{{ threeCols }};gap:20px">
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#60A5FA;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#60A5FA;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">01</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#60A5FA">ODLUČIVANJE</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Proces razmišljanja</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Od nalaza do odluke: šta se radi danas, šta sledeće nedelje.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Od nalaza do odluke: šta se radi danas, šta sledeće nedelje.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#7DD3E8;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#7DD3E8;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">02</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#7DD3E8">AKUTNA FAZA</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Izlazak iz bolne faze</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Kako smanjiti bol bez da pacijent ostane zavisan od pasivnog tretmana.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Kako smanjiti bol bez da pacijent ostane zavisan od pasivnog tretmana.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#93C5FD;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#93C5FD;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">03</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#93C5FD">REHAB FAZA</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Izbor vežbi po nalazu</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Aktivna terapija: doza, izbor i napredovanje vezani za rezultat procene.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Aktivna terapija: doza, izbor i napredovanje vezani za rezultat procene.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#5EC8D8;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#5EC8D8;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">04</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#5EC8D8">TRENING</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Progresija u trening</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Trake, bučice, šipka, hex bar, kablovi, pliometrija.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Trake, bučice, šipka, hex bar, kablovi, pliometrija.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:#1A2F4A;border:1px solid #223A5A;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+          <div class="lk-tcard" style="position:relative;background:#16293E;border:1px solid #1F3654;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
             <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#A5C8FF;box-shadow:0 0 0 3px #0F2A44"></span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#A5C8FF;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">05</span>
               <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#A5C8FF">SISTEM</span>
             </div>
             <div style="font-size:17px;font-weight:600;margin-bottom:10px">Tri faze, jasni kriterijumi</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Šta pacijent mora da ispuni da bi prešao u sledeću fazu.</div>
+            <div style="font-size:14.5px;line-height:1.6;color:#A3BCD2">Šta pacijent mora da ispuni da bi prešao u sledeću fazu.</div>
           </div>
-          <div class="lk-tcard" style="position:relative;background:linear-gradient(160deg,#1A2F4A 0%,#12233A 100%);border:1.5px solid #3B82F6;border-radius:16px;padding:24px;min-height:160px;transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
-            <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#38BDF8;box-shadow:0 0 0 3px #0F2A44"></span>
-            <span style="position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;letter-spacing:0.16em;color:#93C5FD;background:rgba(59,130,246,0.16);border:1px solid rgba(59,130,246,0.32);border-radius:5px;padding:3px 7px">UŽIVO</span>
+          <div class="lk-tcard" style="position:relative;background:linear-gradient(140deg,#FFFFFF 0%,#E9F3FC 100%);border:1px solid #FFFFFF;border-radius:16px;padding:24px;min-height:160px;box-shadow:0 20px 46px rgba(4,17,32,0.45);transition:transform 200ms ease,border-color 200ms ease,box-shadow 200ms ease">
+            <span class="lk-tdot" style="position:absolute;top:-4px;left:32px;width:6px;height:6px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 0 3px #0F2A44"></span>
+            <span style="position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;letter-spacing:0.16em;color:#FFFFFF;background:#0080B0;border:1px solid #0080B0;border-radius:5px;padding:4px 9px">UŽIVO</span>
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-              <span style="width:24px;height:24px;flex:none;border-radius:6px;background:rgba(96,165,250,0.12);color:#38BDF8;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">06</span>
-              <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#38BDF8">PRAKSA</span>
+              <span style="width:24px;height:24px;flex:none;border-radius:6px;background:#DBEAFE;color:#0F2942;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700">06</span>
+              <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:#0080B0">PRAKSA</span>
             </div>
-            <div style="font-size:17px;font-weight:600;margin-bottom:10px">Slučajevi iz prakse</div>
-            <div style="font-size:15px;line-height:1.6;color:#C6DAE9">Rad u grupama: nalaz, odluka, plan, odbrana odluke.</div>
+            <div style="font-size:18px;font-weight:800;font-family:Archivo,sans-serif;letter-spacing:-0.01em;color:#0F2942;margin-bottom:10px">Slučajevi iz prakse</div>
+            <div style="font-size:15.5px;line-height:1.6;color:#42607B">Rad u grupama: nalaz, odluka, plan, odbrana odluke.</div>
           </div>
           </div>
         </div>
@@ -506,38 +532,38 @@
         <div ref="{{ giveRef }}" style="display:grid;grid-template-columns:{{ threeCols }};gap:24px;max-width:1120px;margin:0 auto">
           <div class="lk-gcard" data-c="0" style="position:relative;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:28px;box-shadow:0 4px 16px rgba(15,41,66,0.06);transition:box-shadow 240ms ease,border-color 240ms ease,opacity 420ms ease,transform 420ms ease">
             
-            <div style="width:44px;height:44px;border-radius:50%;background:#DBEAFE;color:#2B7DC0;display:flex;align-items:center;justify-content:center"><i data-lucide="clipboard-list"></i></div>
+            <div style="width:44px;height:44px;border-radius:50%;background:#DBEAFE;color:#0080B0;display:flex;align-items:center;justify-content:center"><i data-lucide="clipboard-list"></i></div>
             <div style="font-size:20px;font-weight:700;color:#0F2942;margin-top:18px">Sistem procene</div>
             <div style="font-size:13px;color:#64748B;margin-top:4px">Od prvog kontakta do odluke</div>
             <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#94A3B8;margin-top:10px">3 dokumenta · print + digital</div>
             <div style="display:flex;flex-direction:column;gap:16px;margin-top:22px">
-              <div class="lk-gcheck" data-i="0" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Baterija testova sa standardima izvođenja</span></div>
-              <div class="lk-gcheck" data-i="1" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Redosled koji vodi do odluke, ne do liste nalaza</span></div>
-              <div class="lk-gcheck" data-i="2" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Gotov obrazac za testiranje pacijenta</span></div>
+              <div class="lk-gcheck" data-i="0" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#EDF7E0;color:#5C9430;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Baterija testova sa standardima izvođenja</span></div>
+              <div class="lk-gcheck" data-i="1" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#EDF7E0;color:#5C9430;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Redosled koji vodi do odluke, ne do liste nalaza</span></div>
+              <div class="lk-gcheck" data-i="2" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#EDF7E0;color:#5C9430;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Gotov obrazac za testiranje pacijenta</span></div>
             </div>
           </div>
-          <div class="lk-gcard" data-c="1" style="position:relative;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:28px;box-shadow:0 4px 16px rgba(15,41,66,0.06);transition:box-shadow 240ms ease,border-color 240ms ease,opacity 420ms ease,transform 420ms ease">
-            
-            <div style="width:44px;height:44px;border-radius:50%;background:#FEF3C7;color:#B45309;display:flex;align-items:center;justify-content:center"><i data-lucide="table-2"></i></div>
-            <div style="font-size:20px;font-weight:700;color:#0F2942;margin-top:18px">Alati za odlučivanje</div>
-            <div style="font-size:13px;color:#64748B;margin-top:4px">Šta raditi, a šta ne</div>
-            <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#94A3B8;margin-top:10px">2 tabele + check-liste · A4</div>
-            <div style="display:flex;flex-direction:column;gap:16px;margin-top:22px">
-              <div class="lk-gcheck" data-i="3" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Tabele diferencijalne dijagnoze</span></div>
-              <div class="lk-gcheck" data-i="4" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Check-liste za prelazak iz faze u fazu</span></div>
-              <div class="lk-gcheck" data-i="5" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Kriterijumi za crvene zastavice i upućivanje dalje</span></div>
+          <div class="lk-gcard" data-c="1" style="position:relative;overflow:hidden;background:linear-gradient(160deg,#123A63 0%,#0F2C4D 60%,#0B2340 100%);border:1px solid #1E3A5F;border-radius:20px;padding:28px;box-shadow:0 14px 34px rgba(11,35,64,0.28);transition:box-shadow 240ms ease,border-color 240ms ease,opacity 420ms ease,transform 420ms ease">
+            <span style="position:absolute;top:-40px;right:-30px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(0,144,192,0.28) 0%,transparent 70%);pointer-events:none"></span>
+            <div style="position:relative;width:44px;height:44px;border-radius:50%;background:rgba(0,144,192,0.18);border:1px solid rgba(96,165,250,0.35);color:#5EC8EE;display:flex;align-items:center;justify-content:center"><i data-lucide="table-2"></i></div>
+            <div style="position:relative;font-size:20px;font-weight:700;color:#FFFFFF;margin-top:18px">Alati za odlučivanje</div>
+            <div style="position:relative;font-size:13px;color:#9FBDD6;margin-top:4px">Šta raditi, a šta ne</div>
+            <div style="position:relative;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#6E90AE;margin-top:10px">2 tabele + check-liste · A4</div>
+            <div style="position:relative;display:flex;flex-direction:column;gap:16px;margin-top:22px">
+              <div class="lk-gcheck" data-i="3" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#DCEAF6">Tabele diferencijalne dijagnoze</span></div>
+              <div class="lk-gcheck" data-i="4" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#DCEAF6">Check-liste za prelazak iz faze u fazu</span></div>
+              <div class="lk-gcheck" data-i="5" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#DCEAF6">Kriterijumi za crvene zastavice i upućivanje dalje</span></div>
             </div>
           </div>
           <div class="lk-gcard" data-c="2" style="position:relative;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:28px;box-shadow:0 4px 16px rgba(15,41,66,0.06);transition:box-shadow 240ms ease,border-color 240ms ease,opacity 420ms ease,transform 420ms ease">
             
-            <div style="width:44px;height:44px;border-radius:50%;background:#DCFCE7;color:#15803D;display:flex;align-items:center;justify-content:center"><i data-lucide="users"></i></div>
+            <div style="width:44px;height:44px;border-radius:50%;background:#EDF7E0;color:#5C9430;display:flex;align-items:center;justify-content:center"><i data-lucide="users"></i></div>
             <div style="font-size:20px;font-weight:700;color:#0F2942;margin-top:18px">Praksa i podrška</div>
             <div style="font-size:13px;color:#64748B;margin-top:4px">Tokom i posle kursa</div>
             <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#94A3B8;margin-top:10px">Skripta + WhatsApp grupa</div>
             <div style="display:flex;flex-direction:column;gap:16px;margin-top:22px">
-              <div class="lk-gcheck" data-i="6" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Praktično iskustvo, rad u parovima oba dana</span></div>
-              <div class="lk-gcheck" data-i="7" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Kompletna skripta i handout materijali</span></div>
-              <div class="lk-gcheck" data-i="8" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#DCFCE7;color:#16A34A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">WhatsApp grupa za pitanja posle kursa</span></div>
+              <div class="lk-gcheck" data-i="6" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#EDF7E0;color:#5C9430;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Praktično iskustvo, rad u parovima oba dana</span></div>
+              <div class="lk-gcheck" data-i="7" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#EDF7E0;color:#5C9430;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">Kompletna skripta i handout materijali</span></div>
+              <div class="lk-gcheck" data-i="8" style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#EDF7E0;color:#5C9430;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span style="font-size:14px;line-height:1.6;color:#334155">WhatsApp grupa za pitanja posle kursa</span></div>
             </div>
           </div>
         </div>
@@ -549,41 +575,52 @@
     </div>
   </div>
 
+  <!-- FOTO BREAK -->
+  <div style="position:relative;overflow:hidden;background:#0B2340;height:{{ bandH }}">
+    <img src="uploads/lokomoto-41.jpg" alt="Rad rukama na pacijentu u Lokomoto Centru" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:48% 62%;display:block;filter:saturate(0.92)" />
+    <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,35,64,0.90) 0%,rgba(11,35,64,0.62) 22%,rgba(11,35,64,0.12) 55%,rgba(11,35,64,0.05) 100%);pointer-events:none"></span>
+    <div style="position:absolute;left:0;right:0;bottom:0;padding:{{ bandPad }};max-width:1280px;margin:0 auto">
+      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#5EC8EE">RAD U PAROVIMA</div>
+      <div style="font-family:Archivo,sans-serif;font-weight:800;font-size:{{ bandSize }};line-height:1.12;letter-spacing:-0.02em;color:#FFFFFF;margin-top:10px;max-width:20ch">Ruke na pacijentu, ne slajdovi.</div>
+    </div>
+  </div>
+
   <!-- ZA KOGA -->
   <div id="zakoga" style="background:#F2F8FF">
     <div style="max-width:1280px;margin:0 auto;padding:80px 28px">
       <div data-reveal="1">
         <div style="text-align:center;max-width:56ch;margin:0 auto 48px">
-          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#2B7DC0">KO TREBA DA DOĐE</div>
+          <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:0.2em;color:#0080B0">KO TREBA DA DOĐE</div>
           <h2 style="font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);line-height:1.1;letter-spacing:-0.02em;color:#0F2942;margin:14px 0 0">Nije za svakog. I to je poenta.</h2>
           <p style="font-size:16px;line-height:1.6;color:#64748B;margin:12px 0 0">Maksimalno 20 mesta. Praktičan rad u parovima. Ako želiš da gledaš sa strane, ovo nije za tebe.</p>
         </div>
-        <div style="display:grid;grid-template-columns:{{ twoCols }};gap:24px;max-width:1000px;margin:0 auto">
-          <div style="background:#FFFFFF;border:1.5px solid #2B7DC0;border-radius:20px;padding:32px;box-shadow:0 8px 24px rgba(43,125,192,0.1)">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
-              <span style="width:32px;height:32px;flex:none;border-radius:50%;background:#2B7DC0;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700">✓</span>
-              <h3 style="font-family:Archivo,sans-serif;font-weight:700;font-size:20px;letter-spacing:0.02em;color:#0F2942;margin:0">Za koga je</h3>
+        <div style="display:grid;grid-template-columns:{{ zaKogaCols }};gap:28px;max-width:1060px;margin:0 auto;align-items:start">
+          <div style="position:relative;overflow:hidden;background:linear-gradient(160deg,#123A63 0%,#0F2C4D 60%,#0B2340 100%);border:1px solid #1E3A5F;border-radius:20px;padding:32px;box-shadow:0 18px 40px rgba(11,35,64,0.30)">
+            <span style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#0090C0 0%,#5EC8EE 55%,#0080B0 100%)"></span><span style="position:absolute;top:-50px;right:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(0,144,192,0.30) 0%,transparent 70%);pointer-events:none"></span>
+            <div style="position:relative;display:flex;align-items:center;gap:12px;margin-bottom:24px">
+              <span style="width:32px;height:32px;flex:none;border-radius:50%;background:rgba(94,200,238,0.18);border:1px solid rgba(94,200,238,0.45);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700">✓</span>
+              <h3 style="font-family:Archivo,sans-serif;font-weight:800;font-size:23px;letter-spacing:-0.01em;color:#FFFFFF;margin:0">Za koga je</h3>
             </div>
-            <div style="display:flex;flex-direction:column;gap:18px">
-            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#DBEAFE;color:#2B7DC0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:15px;font-weight:500;line-height:1.5;color:#0F2942">Fizioterapeuti koji svakodnevno rade sa bolom u leđima</span><span style="display:block;font-size:12px;color:#64748B;margin-top:3px">Bol u donjem delu leđa je stalna tema u praksi</span></span></div>
-            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#DBEAFE;color:#2B7DC0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:15px;font-weight:500;line-height:1.5;color:#0F2942">Treneri koji vode klijente sa istorijom bola</span><span style="display:block;font-size:12px;color:#64748B;margin-top:3px">Progresija do šipke, hex bara i pliometrije</span></span></div>
-            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#DBEAFE;color:#2B7DC0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:15px;font-weight:500;line-height:1.5;color:#0F2942">Fizijatri koji žele jasan put do opterećenja</span><span style="display:block;font-size:12px;color:#64748B;margin-top:3px">Od procene do povratka u teretanu</span></span></div>
-            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#DBEAFE;color:#2B7DC0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:15px;font-weight:500;line-height:1.5;color:#0F2942">Oni koji znaju anatomiju i tehnike, ali nemaju sistem</span><span style="display:block;font-size:12px;color:#64748B;margin-top:3px">Znanje postoji, redosled odlučivanja ne</span></span></div>
-            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:#DBEAFE;color:#2B7DC0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:15px;font-weight:500;line-height:1.5;color:#0F2942">Mešovito iskustvo, i mlađi i oni sa godinama prakse</span><span style="display:block;font-size:12px;color:#64748B;margin-top:3px">Namerno mešovita grupa</span></span></div>
+            <div style="position:relative;display:flex;flex-direction:column;gap:18px">
+            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:16.5px;font-weight:600;line-height:1.45;color:#FFFFFF">Fizioterapeuti koji svakodnevno rade sa bolom u leđima</span><span style="display:block;font-size:12px;color:#8FB2CE;margin-top:3px">Bol u donjem delu leđa je stalna tema u praksi</span></span></div>
+            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:16.5px;font-weight:600;line-height:1.45;color:#FFFFFF">Treneri koji vode klijente sa istorijom bola</span><span style="display:block;font-size:12px;color:#8FB2CE;margin-top:3px">Progresija do šipke, hex bara i pliometrije</span></span></div>
+            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:16.5px;font-weight:600;line-height:1.45;color:#FFFFFF">Fizijatri koji žele jasan put do opterećenja</span><span style="display:block;font-size:12px;color:#8FB2CE;margin-top:3px">Od procene do povratka u teretanu</span></span></div>
+            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:16.5px;font-weight:600;line-height:1.45;color:#FFFFFF">Oni koji znaju anatomiju i tehnike, ali nemaju sistem</span><span style="display:block;font-size:12px;color:#8FB2CE;margin-top:3px">Znanje postoji, redosled odlučivanja ne</span></span></div>
+            <div class="lk-yes" style="display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px;transition:background 180ms ease"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(94,200,238,0.16);border:1px solid rgba(94,200,238,0.4);color:#5EC8EE;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px">✓</span><span><span style="display:block;font-size:16.5px;font-weight:600;line-height:1.45;color:#FFFFFF">Mešovito iskustvo, i mlađi i oni sa godinama prakse</span><span style="display:block;font-size:12px;color:#8FB2CE;margin-top:3px">Namerno mešovita grupa</span></span></div>
             </div>
           </div>
-          <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:20px;padding:32px;opacity:0.9">
+          <div style="background:transparent;border:1.5px dashed #C7D6E4;border-radius:20px;padding:32px;align-self:start">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
               <span style="width:28px;height:28px;flex:none;border-radius:50%;background:#E2E8F0;color:#64748B;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">✕</span>
-              <h3 style="font-family:Archivo,sans-serif;font-weight:700;font-size:18px;letter-spacing:0.02em;color:#475569;margin:0">Za koga nije</h3>
+              <h3 style="font-family:Archivo,sans-serif;font-weight:700;font-size:16px;letter-spacing:0.02em;color:#7A8CA0;margin:0">Za koga nije</h3>
             </div>
             <div style="display:flex;flex-direction:column;gap:16px">
-            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:14px;line-height:1.6;color:#64748B">Za one koji traže listu vežbi po dijagnozi.</span></div>
-            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:14px;line-height:1.6;color:#64748B">Za one koji očekuju garantovan rezultat kod svakog pacijenta.</span></div>
-            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:14px;line-height:1.6;color:#64748B">Za one koji rade isključivo pasivne tretmane i ne planiraju to da menjaju.</span></div>
-            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:14px;line-height:1.6;color:#64748B">Kao zamena za formalno obrazovanje ili licencu.</span></div>
-            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:14px;line-height:1.6;color:#64748B">Za one koji ne rade sa pacijentima ili klijentima.</span></div>
-            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:14px;line-height:1.6;color:#64748B">Za one koji traže online kurs, ovo je rad uživo.</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:13.5px;line-height:1.6;color:#8497A9">Za one koji traže listu vežbi po dijagnozi.</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:13.5px;line-height:1.6;color:#8497A9">Za one koji očekuju garantovan rezultat kod svakog pacijenta.</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:13.5px;line-height:1.6;color:#8497A9">Za one koji rade isključivo pasivne tretmane i ne planiraju to da menjaju.</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:13.5px;line-height:1.6;color:#8497A9">Kao zamena za formalno obrazovanje ili licencu.</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:13.5px;line-height:1.6;color:#8497A9">Za one koji ne rade sa pacijentima ili klijentima.</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:20px;height:20px;border-radius:50%;background:#F1F5F9;color:#94A3B8;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:1px">✕</span><span style="font-size:13.5px;line-height:1.6;color:#8497A9">Za one koji traže online kurs, ovo je rad uživo.</span></div>
             </div>
           </div>
         </div>
@@ -614,12 +651,12 @@
             <div style="font-size:12px;color:#64748B;margin-top:3px">pacijenata</div>
           </div>
           <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:12px">
-            <div style="font-family:Archivo,sans-serif;font-weight:800;font-size:18px;color:#0F2942;line-height:1.1">Lokomoto</div>
-            <div style="font-size:12px;color:#64748B;margin-top:3px">centar za rehabilitaciju</div>
+            <div style="display:flex;align-items:baseline;gap:4px"><span style="font-family:Archivo,sans-serif;font-weight:800;font-size:18px;color:#0F2942;line-height:1.1">5,0</span><span style="color:#0090C0;font-size:14px;line-height:1">★</span></div>
+            <div style="font-size:12px;color:#64748B;margin-top:3px">ocena na Google-u</div>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:16px;margin-top:28px;max-width:520px">
-          <p style="font-size:16px;line-height:1.7;color:#334155;margin:0">Fizioterapeut sa više od 15 godina prakse i vlasnik Lokomoto Centra, specijalizovanog za rehabilitaciju i povratak opterećenju. Sistem koji predaje nastao je iz svakodnevnog rada sa pacijentima sa bolom u donjem delu leđa.</p>
+          <p style="font-size:16px;line-height:1.7;color:#334155;margin:0">Fizioterapeut sa više od 15 godina prakse i vlasnik Lokomoto Centra, specijalizovane ambulante iz oblasti fizikalne medicine i rehabilitacije osnovane 2016. godine. Sistem koji predaje nastao je iz svakodnevnog rada sa pacijentima sa bolom u donjem delu leđa.</p>
           <p style="font-size:16px;line-height:1.7;color:#334155;margin:0">Pristup je jednostavan: procena mora da vodi do odluke, odluka do plana, a plan do opterećenja koje pacijent može da podnese. Ovo nije jedini ispravan pristup, ali je proveren u praksi i može se primeniti odmah.</p>
         </div>
         <div style="background:#F0F7FF;border-left:3px solid #2563EB;border-radius:0 12px 12px 0;padding:20px;margin-top:28px;max-width:520px">
@@ -682,26 +719,26 @@
             <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:32px;box-shadow:0 4px 16px rgba(15,41,66,0.06)">
               <div style="font-family:Archivo,sans-serif;font-weight:700;font-size:22px;line-height:1.25;color:#0F2942">„Već sam bio na kursevima za leđa.”</div>
               <p style="font-size:16px;line-height:1.7;color:#334155;margin:16px 0 0">Ovaj kurs ne uči nove tehnike, nego sistem odlučivanja koji povezuje ono što već znaš. Iste tehnike, ali sa jasnim kriterijumom kada se koja koristi.</p>
-              <div style="background:#F0F7FF;border-left:3px solid #2B7DC0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Problem nije što ne znaš dovoljno tehnika, nego što nemaš sistem.</div>
-              <a href="#program" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#2B7DC0">Vidi program Dana 2 →</a>
-              <div style="position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#EEF3F8 0 8px,#E4ECF4 8px 16px);width:100%;height:180px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-47.jpg" alt="Sa prethodne edukacije" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
+              <div style="background:#F0F7FF;border-left:3px solid #0080B0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Problem nije što ne znaš dovoljno tehnika, nego što nemaš sistem.</div>
+              <a href="#program" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#0080B0">Vidi program Dana 2 →</a>
+              <div style="position:relative;overflow:hidden;background:#0F2942;width:100%;height:360px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-56.jpg" alt="Tretman u Lokomoto Centru" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 46%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
             </div>
           </sc-if>
           <sc-if value="{{ faq2 }}" hint-placeholder-val="{{ false }}">
             <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:32px;box-shadow:0 4px 16px rgba(15,41,66,0.06)">
               <div style="font-family:Archivo,sans-serif;font-weight:700;font-size:22px;line-height:1.25;color:#0F2942">„Imam malo iskustva.”</div>
               <p style="font-size:16px;line-height:1.7;color:#334155;margin:16px 0 0">Grupa je namerno mešovita. Mlađim kolegama sistem daje strukturu od početka, iskusnijima sređuje znanje koje već imaju.</p>
-              <div style="background:#F0F7FF;border-left:3px solid #2B7DC0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Ne učiš listu vežbi za dijagnozu, nego kako da razmišljaš pred pacijentom.</div>
-              <a href="#zakoga" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#2B7DC0">Vidi za koga je →</a>
-              <div style="position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#EEF3F8 0 8px,#E4ECF4 8px 16px);width:100%;height:180px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-47.jpg" alt="Sa prethodne edukacije" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
+              <div style="background:#F0F7FF;border-left:3px solid #0080B0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Ne učiš listu vežbi za dijagnozu, nego kako da razmišljaš pred pacijentom.</div>
+              <a href="#zakoga" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#0080B0">Vidi za koga je →</a>
+              <div style="position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#EEF3F8 0 8px,#E4ECF4 8px 16px);width:100%;height:300px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-76.jpg" alt="Rad sa pacijentom u Lokomoto Centru" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 42%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
             </div>
           </sc-if>
           <sc-if value="{{ faq3 }}" hint-placeholder-val="{{ false }}">
             <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:32px;box-shadow:0 4px 16px rgba(15,41,66,0.06)">
               <div style="font-family:Archivo,sans-serif;font-weight:700;font-size:22px;line-height:1.25;color:#0F2942">„Radim sa sportistima.”</div>
               <p style="font-size:16px;line-height:1.7;color:#334155;margin:16px 0 0">Program pokriva ceo put do šipke, hex bara, kablova i pliometrije, što je povratak sportu. Progresija se ne prekida na traci i bučicama.</p>
-              <div style="background:#F0F7FF;border-left:3px solid #2B7DC0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Dijagnoza ti kaže šta je, ali ne kaže koliko toga pacijent trenutno može da podnese.</div>
-              <a href="#program" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#2B7DC0">Vidi progresiju u trening →</a>
+              <div style="background:#F0F7FF;border-left:3px solid #0080B0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Dijagnoza ti kaže šta je, ali ne kaže koliko toga pacijent trenutno može da podnese.</div>
+              <a href="#program" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#0080B0">Vidi progresiju u trening →</a>
               <div style="position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#EEF3F8 0 8px,#E4ECF4 8px 16px);width:100%;height:180px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-47.jpg" alt="Sa prethodne edukacije" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
             </div>
           </sc-if>
@@ -709,17 +746,17 @@
             <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:32px;box-shadow:0 4px 16px rgba(15,41,66,0.06)">
               <div style="font-family:Archivo,sans-serif;font-weight:700;font-size:22px;line-height:1.25;color:#0F2942">„Da li mogu odmah da primenim?”</div>
               <p style="font-size:16px;line-height:1.7;color:#334155;margin:16px 0 0">Da. Dobijaš gotove obrasce i kriterijume, a izvođenje uvežbavaš na kursu u parovima.</p>
-              <div style="background:#F0F7FF;border-left:3px solid #2B7DC0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Odlaziš sa sistemom koji možeš da primeniš već od ponedeljka.</div>
-              <a href="#dobijas" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#2B7DC0">Vidi šta odnosiš →</a>
-              <div style="position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#EEF3F8 0 8px,#E4ECF4 8px 16px);width:100%;height:180px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-47.jpg" alt="Sa prethodne edukacije" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
+              <div style="background:#F0F7FF;border-left:3px solid #0080B0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Odlaziš sa sistemom koji možeš da primeniš već od ponedeljka.</div>
+              <a href="#dobijas" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#0080B0">Vidi šta odnosiš →</a>
+              <div style="position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#EEF3F8 0 8px,#E4ECF4 8px 16px);width:100%;height:300px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-78.jpg" alt="Primena u sali sa pacijentom" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
             </div>
           </sc-if>
           <sc-if value="{{ faq5 }}" hint-placeholder-val="{{ false }}">
             <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:20px;padding:32px;box-shadow:0 4px 16px rgba(15,41,66,0.06)">
               <div style="font-family:Archivo,sans-serif;font-weight:700;font-size:22px;line-height:1.25;color:#0F2942">„Da li je previše teorije?”</div>
               <p style="font-size:16px;line-height:1.7;color:#334155;margin:16px 0 0">Teorija ide samo koliko treba da objasni odluku. Veliki deo oba dana je praktičan rad.</p>
-              <div style="background:#F0F7FF;border-left:3px solid #2B7DC0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Vežba nije rešenje. Vežba je alat.</div>
-              <a href="#program" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#2B7DC0">Vidi Dan 1 · Procena →</a>
+              <div style="background:#F0F7FF;border-left:3px solid #0080B0;border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;font-size:15px;font-style:italic;font-weight:500;color:#0F2942">Vežba nije rešenje. Vežba je alat.</div>
+              <a href="#program" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14px;font-weight:600;color:#0080B0">Vidi Dan 1 · Procena →</a>
               <div style="position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#EEF3F8 0 8px,#E4ECF4 8px 16px);width:100%;height:180px;border-radius:12px;margin-top:16px"><img src="uploads/lokomoto-47.jpg" alt="Sa prethodne edukacije" loading="lazy" onError="{{ hideImg }}" style="width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block;position:relative;z-index:3" /><span style="position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7C93A8;text-align:center;padding:8px"></span></div>
             </div>
           </sc-if>
@@ -779,7 +816,7 @@
         <p style="font-size:18px;line-height:1.6;color:#C6DAE9;margin:0 auto 32px;max-width:56ch">20 mesta, jedna grupa, 31.10.2026. Prijava se potvrđuje uplatom na račun. Puna refundacija do mesec dana pre datuma.</p>
         <div style="display:inline-flex;align-items:center;gap:8px;background:#FEF3C7;color:#92400E;font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;margin:0 0 28px">🔥 Ostalo {{ spotsLeft }}/20 · poslednja grupa u 2026.</div>
         <div></div>
-        <button type="button" onClick="{{ openModal }}" style="width:{{ ctaW }};background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:19px 40px;font-size:17px;font-weight:600;cursor:pointer;box-shadow:0 10px 26px rgba(33,120,190,0.32)" style-hover="background:#2E8BD4">Prijavi se · 399€</button>
+        <button type="button" onClick="{{ openModal }}" style="width:{{ ctaW }};background:linear-gradient(135deg,#0090C0 0%,#0080B0 48%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:19px 40px;font-size:17px;font-weight:600;cursor:pointer;box-shadow:0 10px 26px rgba(33,120,190,0.32)" style-hover="background:#2E8BD4">Prijavi se · 399€</button>
         <div style="margin-top:24px;font-size:14px;color:rgba(255,255,255,0.6)">Pitanja: <a href="mailto:lokomoto.centar@gmail.com" style="color:rgba(255,255,255,0.6);text-decoration:none" style-hover="text-decoration:underline">lokomoto.centar@gmail.com</a> &middot; <a href="tel:+381114095924" style="color:rgba(255,255,255,0.6);text-decoration:none" style-hover="text-decoration:underline">+381 11 4095924</a></div>
       </div>
     </div>
@@ -813,12 +850,16 @@
 
   <!-- STICKY MOBILE CTA -->
   <sc-if value="{{ isNarrow }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed;left:0;right:0;bottom:0;z-index:70;background:#FFFFFF;border-top:1px solid #E2ECF5;box-shadow:0 -6px 20px rgba(15,42,68,0.08);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-      <div>
-        <div style="font-size:15px;font-weight:700">399€ &middot; 31.10.2026.</div>
-        <div style="font-size:12px;color:#7A8FA0">Ostalo {{ spotsLeft }} od 20 mesta</div>
+    <div style="position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #E2ECF5;box-shadow:0 -6px 20px rgba(15,42,68,0.08);padding:10px 14px calc(10px + env(safe-area-inset-bottom))">
+      <button type="button" onClick="{{ openModal }}" style="display:flex;align-items:center;gap:12px;width:100%;background:linear-gradient(135deg,#0090C0 0%,#0080B0 48%,#004878 100%);color:#FFFFFF;border:none;border-radius:12px;padding:10px 16px 10px 10px;cursor:pointer;text-align:left;box-shadow:0 8px 20px -6px rgba(0,128,176,0.6)">
+        <span style="flex:none;width:38px;height:38px;border-radius:9px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="uploads/lokomoto-logo-krug.png" alt="" style="width:32px;height:32px;object-fit:contain;display:block" /></span>
+        <span style="flex:1;font-size:16px;font-weight:700;letter-spacing:-0.01em">Rezerviši mesto &middot; 399€</span>
+        <span style="flex:none;font-size:16px;opacity:0.85">→</span>
+      </button>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:7px;padding:0 2px;font-size:12px;color:#7A8FA0">
+        <span style="flex:none;width:6px;height:6px;border-radius:50%;background:#0090C0"></span>
+        <span>31.10.2026. &middot; ostalo <strong style="color:#0F2942;font-weight:700">{{ spotsLeft }}</strong> od 20 mesta</span>
       </div>
-      <button type="button" onClick="{{ openModal }}" style="background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:14px 22px;font-size:15px;font-weight:600;cursor:pointer" style-hover="background:#2E8BD4">Rezerviši mesto</button>
     </div>
   </sc-if>
 
@@ -865,7 +906,7 @@
               <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
                 <div style="font-size:14px;color:#C0492F">Popuni ime, email i telefon.</div>
               </sc-if>
-              <button type="button" onClick="{{ submit }}" style="margin-top:6px;background:linear-gradient(135deg,#0090C0 0%,#2B7DC0 52%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:16px;font-size:16px;font-weight:600;cursor:pointer" style-hover="background:#2E8BD4">Pošalji prijavu</button>
+              <button type="button" onClick="{{ submit }}" style="margin-top:6px;background:linear-gradient(135deg,#0090C0 0%,#0080B0 48%,#004878 100%);color:#FFFFFF;border:none;border-radius:999px;padding:16px;font-size:16px;font-weight:600;cursor:pointer" style-hover="background:#2E8BD4">Pošalji prijavu</button>
               <div style="font-size:13px;color:#7A8FA0;line-height:1.5">Prijava nije obavezujuća do uplate. Puna refundacija do mesec dana pre edukacije.</div>
             </div>
           </div>
@@ -1142,11 +1183,101 @@ class Component extends DCLogic {
     };
   }
 
+  navRef = (el) => {
+    if (!el || this.navEl === el) return;
+    this.navEl = el;
+    if (this.navScroll) window.removeEventListener('scroll', this.navScroll);
+    let last = window.scrollY;
+    let hidden = false;
+    this.navScroll = () => {
+      const y = window.scrollY;
+      const d = y - last;
+      if (Math.abs(d) < 6) return;
+      const shouldHide = d > 0 && y > 420;
+      if (shouldHide !== hidden) {
+        hidden = shouldHide;
+        el.style.transform = hidden ? 'translateY(-102%)' : 'translateY(0)';
+      }
+      last = y;
+    };
+    window.addEventListener('scroll', this.navScroll, { passive: true });
+  };
+
+  manifestRef = (el) => {
+    if (!el || this.manifestEl === el) return;
+    this.manifestEl = el;
+    el.addEventListener('scroll', () => {
+      const card = el.firstElementChild;
+      if (!card) return;
+      const step = card.getBoundingClientRect().width + 12;
+      const i = Math.round(el.scrollLeft / step);
+      if (i !== this.state.mIdx) this.setState({ mIdx: i });
+    }, { passive: true });
+  };
+
+  manifestGo = (dir) => {
+    const el = this.manifestEl;
+    if (!el) return;
+    const card = el.firstElementChild;
+    if (!card) return;
+    const step = card.getBoundingClientRect().width + 12;
+    el.scrollBy({ left: dir * step, behavior: 'smooth' });
+  };
+
+  primeLoop = (el) => {
+    if (!el || el.dataset.primed) return;
+    el.dataset.primed = '1';
+    el.muted = true;
+    el.defaultMuted = true;
+    el.setAttribute('muted', '');
+    el.setAttribute('playsinline', '');
+    el.setAttribute('webkit-playsinline', '');
+    const go = () => { const p = el.play(); if (p && p.catch) p.catch(() => {}); };
+    go();
+    el.addEventListener('loadeddata', go);
+    el.addEventListener('canplay', go);
+    ['touchstart', 'pointerdown', 'scroll'].forEach(ev =>
+      window.addEventListener(ev, go, { once: true, passive: true }));
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) go(); });
+  };
+
   renderVals() {
     const spots = this.props.spotsLeft ?? 7;
     const f = this.state.faq;
     return {
-      loopRef: (el) => { this.loopEl = el; },
+      loopRef: (el) => { this.loopEl = el; this.primeLoop(el); },
+      loopRefM: (el) => { this.loopElM = el; this.primeLoop(el); },
+      heroWide: this.state.vw >= 1080,
+      heroNarrow: this.state.vw < 1080,
+      showHeroCountdown: this.state.vw >= 640 && this.state.vw < 1080,
+      heroPad: this.state.vw >= 1080 ? '48px 28px 80px' : '12px 20px 44px',
+      heroH1: this.state.vw >= 1080 ? 'clamp(30px,3.6vw,44px)' : '27px',
+      heroBadgeGap: this.state.vw >= 1080 ? '26px' : '14px',
+      heroBadgeSize: this.state.vw >= 1080 ? '13px' : '10px',
+      heroBadgePad: this.state.vw >= 1080 ? '8px 16px' : '6px 11px',
+      heroBadgeWrap: this.state.vw >= 1080 ? 'normal' : 'nowrap',
+      zaKogaCols: this.state.vw >= 820 ? '1.18fr 0.82fr' : '1fr',
+      navRef: this.navRef,
+      practiceSpan: this.state.vw >= 620 ? '1 / -1' : 'auto',
+      wideCard: this.state.vw >= 620 ? 'span 2' : 'auto',
+      manifestRef: this.manifestRef,
+      manifestSwipe: this.state.vw < 620,
+      manifestPrev: () => this.manifestGo(-1),
+      manifestNext: () => this.manifestGo(1),
+      mdW0: (this.state.mIdx || 0) === 0 ? '22px' : '6px',
+      mdW1: (this.state.mIdx || 0) === 1 ? '22px' : '6px',
+      mdW2: (this.state.mIdx || 0) === 2 ? '22px' : '6px',
+      mdW3: (this.state.mIdx || 0) === 3 ? '22px' : '6px',
+      mdC0: (this.state.mIdx || 0) === 0 ? '#0080B0' : '#C7D6E4',
+      mdC1: (this.state.mIdx || 0) === 1 ? '#0080B0' : '#C7D6E4',
+      mdC2: (this.state.mIdx || 0) === 2 ? '#0080B0' : '#C7D6E4',
+      mdC3: (this.state.mIdx || 0) === 3 ? '#0080B0' : '#C7D6E4',
+      bandH: this.state.vw >= 900 ? '460px' : '320px',
+      bandPad: this.state.vw >= 900 ? '0 28px 44px' : '0 20px 28px',
+      bandSize: this.state.vw >= 900 ? '40px' : '28px',
+      heroPSize: this.state.vw >= 1080 ? '18px' : '15px',
+      heroPGap: this.state.vw >= 1080 ? '24px' : '12px',
+      heroCtaGap: this.state.vw >= 1080 ? '32px' : '16px',
       lightboxRef: (el) => { this.lightboxEl = el; },
       videoOpen: this.state.videoOpen,
       openVideo: this.openVideo,
@@ -1227,4 +1358,4 @@ class Component extends DCLogic {
 }
 </script>
 </body>
-</html>
+</html>t
